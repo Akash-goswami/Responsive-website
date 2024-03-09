@@ -1,0 +1,163 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-image: linear-gradient(344deg, #29889c 0%, #031928 100%);
+    font-size: 24px;
+    position: relative;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+nav ul li a:hover{
+    transition: 0.5s;
+    color: rgb(12, 167, 228);
+}
+.hero{
+    text-align: center;
+    background-image: linear-gradient(344deg, #29889c 0%, #031928 100%);
+    min-height: 86vh;
+    
+}
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+footer{
+    text-align: center;
+    background-color: #5a6363;
+}
+
+/* conect css  */
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-info {
+    margin-bottom: 20px;
+}
+.contact-info p {
+    margin: 5px 0;
+}
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        display: none;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width: 668px) {
+    .menu-icon {
+        display: none; /* Hide the menu icon on larger screens */
+    }
+    .nav ul {
+        display: inline; /* Ensure the list is visible on larger screens */
+    }
+}
+.menu-container {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start menu off-screen */
+    width: 250px; /* Adjust width as needed */
+    height: 100%;
+    background: #b7b7b7;
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+.menu-open {
+    right: 0; /* Slide menu into view */
+}
+.menu-container ul{
+    list-style: none;
+}
+.menu-container ul li a{
+    color: black;
+    text-decoration: none;
+}
+.menu-container ul li a:hover{
+    color: #fff;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close-btn::after {
+    content: "×"; /* Unicode for '×' character */
+    font-size: 24px;
+}
